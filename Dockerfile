@@ -1,8 +1,8 @@
-FROM python:3.7.0-slim-stretch
+FROM python:3.7.0-alpine3.8
 MAINTAINER m.vanzanten@icenet.nl
 
-RUN apt-get update && apt-get upgrade && \
-    apt-get install git zabbix-agent -y
+RUN apk update && apk upgrade && \
+    apk install git bash openssh zabbix-agent -y
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r /requirements.txt
