@@ -10,5 +10,7 @@ RUN rm /requirements.txt
 
 RUN git clone https://github.com/icetail/zabbix-speedtest.git /opt/speedtest
 
-#RUN cp /opt/speedtest/zabbix_speedtest.sh /etc/zabbix/script/zabbix_speedtest.sh
-#RUN chmod +x /etc/zabbix/script/zabbix_speedtest.sh
+RUN mkdir /etc/zabbix/script
+
+RUN cp /opt/speedtest/zabbix_speedtest.sh /etc/zabbix/script/zabbix_speedtest.sh
+RUN chmod +x /etc/zabbix/script/zabbix_speedtest.sh
