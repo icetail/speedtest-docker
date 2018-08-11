@@ -2,7 +2,7 @@ FROM python:3.7.0-slim-stretch
 MAINTAINER m.vanzanten@icenet.nl
 
 RUN apt-get update && apt-get upgrade && \
-    apt-get install bash git openssh zabbix-agent
+    apt-get install bash git openssh zabbix-agent -y
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir -r /requirements.txt
