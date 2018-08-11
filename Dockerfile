@@ -6,7 +6,7 @@ RUN apk update && apk upgrade && \
 
 
 COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir -r /requirements.txt
 RUN rm /requirements.txt
 
 RUN git clone https://github.com/icetail/zabbix-speedtest.git /opt/speedtest
